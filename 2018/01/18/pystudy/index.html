@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Lys">
 <meta property="og:description" content="对python学习的简单总结由于公司的工作不是很忙，所以可以抽空可以看看python，带我的姐姐也比较和善，不会管这些事情。   这一周主要学习python的基本语法，直观感受是和matlab很像，对于数学计算的支持算是十分完备了。  一、输入输出python的输入输出主要调用input()和print（）这两个函数，在数据输出格式化上和C语言一致。    打印字符串%s   打印整数%d   打">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-25T06:56:59.499Z">
+<meta property="og:updated_time" content="2018-01-25T07:07:33.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pystudy">
 <meta name="twitter:description" content="对python学习的简单总结由于公司的工作不是很忙，所以可以抽空可以看看python，带我的姐姐也比较和善，不会管这些事情。   这一周主要学习python的基本语法，直观感受是和matlab很像，对于数学计算的支持算是十分完备了。  一、输入输出python的输入输出主要调用input()和print（）这两个函数，在数据输出格式化上和C语言一致。    打印字符串%s   打印整数%d   打">
@@ -401,6 +401,10 @@
 <p>利用生成器计算杨辉三角。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">tri</span><span class="params">()</span>:</span></div><div class="line">Y = [<span class="number">1</span>]</div><div class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">	<span class="keyword">yield</span> Y</div><div class="line">	Y = [<span class="number">1</span>] + [Y[i] + Y[i + <span class="number">1</span>] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(Y) - <span class="number">1</span>)] + [<span class="number">1</span>]</div></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>g = tri()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>next(g)</div><div class="line">[<span class="number">1</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>next(g)</div><div class="line">[<span class="number">1</span>, <span class="number">1</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>next(g)</div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>]</div></pre></td></tr></table></figure>
+<p>这里还要提及一下，在写代码块的时候遇到的一个大坑。由于hexo可以支持代码高亮，所以我们可以用</p>
+<p>\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">···</div><div class="line"></div><div class="line">\</div></pre></td></tr></table></figure></p>
+<p>这种形式来书写代码块，但一定要注意代码块末尾的```要单独一行，不添加任何空格。</p>
+
       
     </div>
     
